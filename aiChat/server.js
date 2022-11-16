@@ -4,7 +4,7 @@ var request = require('request');
 var { OpenAIApi, Configuration } = require('openai');
 
 let config = new Configuration({
-  apiKey: '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',
+  apiKey: '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',
 });
 let openai = new OpenAIApi(config);
 
@@ -27,11 +27,11 @@ app.get('/translate', function (req, res) {
        headers: {'X-Naver-Client-Id':client_id, 'X-Naver-Client-Secret': client_secret}
     };
    request.post(options, function (error, response, body) {
-       var 영어 = JSON.parse(body).message?.result.translatedText;
+       var english = JSON.parse(body).message?.result.translatedText;
 
        openai.createCompletion({
           model: "text-davinci-002",
-          prompt: 영어,
+          prompt: english,
           temperature: 0.7,
           max_tokens: 128,
           top_p: 1,

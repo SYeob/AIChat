@@ -11,18 +11,21 @@
 </head>
 
 <body>
-<h1>AI Chat</h1>
-  <div class="chat-content">
-    <div class="line">
-      <span class="chat-box">채팅을 보내고 5초 후 답장이 옵니다.</span>
+  <h1>AI Chat</h1>
+
+  <div class="phone">
+    <div class="chat-content">
+      <div class="line">
+        <span class="chat-box">채팅을 보내고 5초 후 답장이 옵니다.</span>
+      </div>
+      <div class="line">
+        <span class="chat-box mine">한국어와 영어를 지원합니다. 좋은 하루 되세요.</span>
+      </div>
     </div>
-    <div class="line">
-      <span class="chat-box mine">한국어와 영어를 지원합니다. 좋은 하루 되세요.</span>
+    <div id="bottom">
+      <input class="chat-box" id="input">
+      <button id="send">전송</button>
     </div>
-  </div>
-  <div id="bottom">
-    <input class="chat-box" id="input">
-    <button id="send">전송</button>
   </div>
   <script type="module">
     import { Configuration, OpenAIApi } from 'https://cdn.skypack.dev/openai';
@@ -51,7 +54,7 @@
 
       // OpenApi 
       const configuration = new Configuration({
-        apiKey: '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',
+        apiKey: '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',
       });
       const openai = new OpenAIApi(configuration);
 
